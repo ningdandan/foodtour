@@ -1,0 +1,280 @@
+{
+  "tour": {
+    "id": "queens-food-crawl-2026",
+    "title": "杰克逊高地觅食记",
+    "title_en": "Jackson Heights Food Crawl",
+    "type": "food",
+    "description": "在纽约皇后区一条不到一英里的街上，住着来自七个国家的人，他们把家乡的味道搬到了纽约的人行道上。一个下午，沿着推车、窗口与小馆，从南亚一路吃到东南亚。",
+    "tour_date": "2026-06-01",
+    "city": "New York",
+    "cover_url": "",
+    "status": "draft",
+    "guide": {
+      "id": "guide-001",
+      "name": "Ada",
+      "name_en": "Mia",
+      "bio": "皮的猫之母，耀祖室友",
+      "avatar_url": "",
+      "contact": "微信：queens_foodie"
+    },
+    "sections": [
+      {
+        "id": "sec-bangladesh",
+        "title": "孟加拉",
+        "subtitle": "Bangladesh",
+        "icon": "🇧🇩",
+        "description": "37 大道路口的推车群，被本地人称作「小孟加拉国」。从这里开场。",
+        "position": 1,
+        "points": [
+          {
+            "id": "pt-fuchka",
+            "name_zh": "孟加拉脆球",
+            "name_en": "Fuchka",
+            "description": "炸得酥脆的小球，戳个洞塞进土豆、鹰嘴豆，再浇上酸辣的罗望子水。整颗塞进嘴里，咬开瞬间爆汁，咸酸辣甜一齐炸开，吃相越狼狈越对味。",
+            "location_text": "37 大道路口的孟加拉推车群",
+            "image_url": "",
+            "position": 1,
+            "attributes": {
+              "country_flag": "🇧🇩",
+              "how_to_order": "来一份 Fuchka，可加带酸奶的 Doi Fuchka",
+              "flavor_tags": [
+                "酸",
+                "辣",
+                "爆汁"
+              ],
+              "cash_only": true
+            }
+          },
+          {
+            "id": "pt-mango-salad",
+            "name_zh": "青芒沙拉佐芥末",
+            "name_en": "Mango Salad with Wasabi",
+            "description": "用没熟的青芒切丝，酸脆爽口，撒上辣椒盐，再点一抹冲鼻的芥末。酸、辣、冲三重刺激层层叠上，是开胃醒神的一口，给重口味的旅程先打个底。",
+            "location_text": "同区推车",
+            "image_url": "",
+            "position": 2,
+            "attributes": {
+              "country_flag": "🇧🇩",
+              "how_to_order": "当开胃小食，分着吃一份即可",
+              "flavor_tags": [
+                "酸",
+                "辣",
+                "冲"
+              ],
+              "cash_only": true
+            }
+          },
+          {
+            "id": "pt-chai",
+            "name_zh": "玛莎拉奶茶",
+            "name_en": "Chai",
+            "description": "红茶加牛奶慢煮，丢进姜、豆蔻、肉桂等一把香料，甜浓暖身。配着它坐下来，听一段孟加拉人围着茶天南海北聊天的「Adda」文化故事，刚刚好。",
+            "location_text": "Adda Ghor 茶馆",
+            "image_url": "",
+            "position": 3,
+            "attributes": {
+              "country_flag": "🍵",
+              "how_to_order": "一杯 Chai，坐下来慢慢喝",
+              "flavor_tags": [
+                "甜",
+                "香料",
+                "暖"
+              ],
+              "culture_note": "Adda：围着茶天南海北聊天的孟加拉社交文化，近似成都茶馆摆龙门阵"
+            }
+          }
+        ]
+      },
+      {
+        "id": "sec-nepal",
+        "title": "尼泊尔",
+        "subtitle": "Nepal",
+        "icon": "🇳🇵",
+        "description": "翻过喜马拉雅的味道。提前网上点，省去现包现蒸的等位。",
+        "position": 2,
+        "points": [
+          {
+            "id": "pt-momo",
+            "name_zh": "尼泊尔蒸饺",
+            "name_en": "Momo",
+            "description": "翻过喜马拉雅的「饺子」，名字和中文「馍馍」同源。皮厚有嚼劲，馅多汁，配上芝麻番茄打成的灵魂蘸酱achar。一种你熟悉的形状，一种你没尝过的味道。",
+            "location_text": "尼泊尔 momo 店（提前网上点）",
+            "image_url": "",
+            "position": 1,
+            "attributes": {
+              "country_flag": "🇳🇵",
+              "how_to_order": "蒸饺一份，蘸 achar",
+              "flavor_tags": [
+                "有嚼劲",
+                "多汁"
+              ],
+              "fun_fact": "Momo 与中文「馍馍」同源，沿喜马拉雅通道传入"
+            }
+          },
+          {
+            "id": "pt-jhol-momo",
+            "name_zh": "尼泊尔汤饺",
+            "name_en": "Jhol Momo",
+            "description": "momo 的「带汤版」，饺子整个泡进香料浓汤里，连吃带喝。和上一盘蒸饺同源不同魂，像蒸饺对红油抄手。那碗酸辣汤汁，才是真正的主角。",
+            "location_text": "同店",
+            "image_url": "",
+            "position": 2,
+            "attributes": {
+              "country_flag": "🇳🇵",
+              "how_to_order": "汤饺一份，汤要喝光",
+              "flavor_tags": [
+                "酸辣",
+                "汤汁"
+              ],
+              "fun_fact": "和蒸饺同源不同魂，类比蒸饺 vs 红油抄手"
+            }
+          },
+          {
+            "id": "pt-waiwai-sadeko",
+            "name_zh": "香料凉拌干脆面",
+            "name_en": "WaiWai Sadeko",
+            "description": "尼泊尔国民零食 WaiWai 干脆面捏碎，拌上洋葱、香菜、青辣椒、柠檬和一把香料，做成酸辣开胃的凉拌小吃。不是泡着吃的方便面，而是当地街头人人爱的「干拌版」，越嚼越上头。",
+            "location_text": "同店",
+            "image_url": "",
+            "position": 3,
+            "attributes": {
+              "country_flag": "🇳🇵",
+              "how_to_order": "当配菜分着吃",
+              "flavor_tags": [
+                "酸辣",
+                "脆"
+              ],
+              "fun_fact": "Sadeko 在尼泊尔语里意为「凉拌」"
+            }
+          }
+        ]
+      },
+      {
+        "id": "sec-india",
+        "title": "印度",
+        "subtitle": "India",
+        "icon": "🇮🇳",
+        "description": "丝路另一端传来的甜。给牙齿一点甜蜜的暴击。",
+        "position": 3,
+        "points": [
+          {
+            "id": "pt-jalebi",
+            "name_zh": "玫瑰糖浆螺旋脆条",
+            "name_en": "Jalebi",
+            "description": "面糊炸成金黄螺旋，再泡进糖浆，酥脆又齁甜，是「血糖刺客」本客。源头在波斯，沿丝路传入印度成了国民甜点。配酸奶或热奶吃，刚好压住那股甜。",
+            "location_text": "印度甜品店",
+            "image_url": "",
+            "position": 1,
+            "attributes": {
+              "country_flag": "🇮🇳",
+              "how_to_order": "配酸奶或热奶平衡甜度",
+              "flavor_tags": [
+                "极甜",
+                "酥脆"
+              ],
+              "fun_fact": "源自波斯 zalabiya，沿丝路传入印度"
+            }
+          },
+          {
+            "id": "pt-gulab-jamun",
+            "name_zh": "玫瑰糖心奶球",
+            "name_en": "Gulab Jamun",
+            "description": "奶粉团炸成深金色小球，泡在玫瑰糖浆里温热吃，口感像热乎的糖心汤圆。Gulab 是玫瑰，Jamun 指它浆果般的圆形。南亚甜度天花板，甜到DNA报警。",
+            "location_text": "同店",
+            "image_url": "",
+            "position": 2,
+            "attributes": {
+              "country_flag": "🇮🇳",
+              "how_to_order": "温热吃，一两颗即可",
+              "flavor_tags": [
+                "极甜",
+                "温热"
+              ],
+              "fun_fact": "Gulab=玫瑰，Jamun 指其浆果般的圆形"
+            }
+          }
+        ]
+      },
+      {
+        "id": "sec-myanmar",
+        "title": "缅甸",
+        "subtitle": "Myanmar",
+        "icon": "🇲🇲",
+        "description": "穿过几条街，走进 Elmhurst 另一个国度的厨房。",
+        "position": 4,
+        "points": [
+          {
+            "id": "pt-lahpet-thoke",
+            "name_zh": "发酵茶叶沙拉",
+            "name_en": "Lahpet Thoke",
+            "description": "缅甸独有的「能吃的茶」——茶叶埋进竹筒发酵数月，再拌上脆花生坚果。古代曾是交战国之间的停战礼。茶叶居然嚼着吃，立顿看了都沉默。",
+            "location_text": "Eaterniti Burmese Street Food, Elmhurst",
+            "image_url": "",
+            "position": 1,
+            "attributes": {
+              "country_flag": "🇲🇲",
+              "how_to_order": "茶叶沙拉 + 缅式煎饼",
+              "flavor_tags": [
+                "发酵",
+                "脆",
+                "咸香"
+              ],
+              "fun_fact": "古代曾用作交战国之间的停战礼物",
+              "closed_days": [
+                "周三"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "sec-indonesia",
+        "title": "印尼",
+        "subtitle": "Indonesia",
+        "icon": "🇮🇩",
+        "description": "今天的压轴。被全世界投票选出的味道，给旅程一个温暖句号。",
+        "position": 5,
+        "points": [
+          {
+            "id": "pt-rendang",
+            "name_zh": "仁当牛肉",
+            "name_en": "Beef Rendang",
+            "description": "椰浆加香料慢炖数小时收干，软烂入味，曾两度被CNN评为「全球最好吃」。源自印度咖喱、在苏门答腊演化成形，本是为长途旅行发明的「古代军粮」。",
+            "location_text": "Awang Kitchen, Elmhurst",
+            "image_url": "",
+            "position": 1,
+            "attributes": {
+              "country_flag": "🇮🇩",
+              "how_to_order": "招牌必点：干仁当配椰浆饭",
+              "flavor_tags": [
+                "香料浓郁",
+                "软烂"
+              ],
+              "fun_fact": "两度被 CNN 评为全球最好吃的食物",
+              "is_signature": true
+            }
+          },
+          {
+            "id": "pt-bakso",
+            "name_zh": "印尼牛肉丸汤",
+            "name_en": "Bakso",
+            "description": "印尼国民牛肉丸汤，弹牙大肉丸泡在热汤里配面或米粉，暖胃又亲切，像中国的牛肉丸粉。仁当的最佳配角，冷天来一碗，从喜马拉雅一路暖到东南亚。",
+            "location_text": "同店",
+            "image_url": "",
+            "position": 2,
+            "attributes": {
+              "country_flag": "🇮🇩",
+              "how_to_order": "冷天可选的暖身彩蛋",
+              "flavor_tags": [
+                "弹牙",
+                "暖汤"
+              ],
+              "is_optional": true,
+              "best_in": "冷天"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
