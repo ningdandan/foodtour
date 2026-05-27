@@ -102,6 +102,10 @@ const FALLBACK_GUIDE_AVATAR =
 const FALLBACK_STOP_IMAGE =
   "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=600&h=380&fit=crop&auto=format";
 
+const STICKER_SCALE_OVERRIDES: Record<string, number> = {
+  "pt-bakso": 1.42,
+};
+
 const localDishImages = Object.entries(
   import.meta.glob("./*.png", { eager: true, import: "default" }) as Record<string, string>,
 )
@@ -189,7 +193,7 @@ export const tourContent: AppTourContent = {
           photo: localImage,
           useImageContain: true,
           useStickerStyle: true,
-          stickerScale: 1.18,
+          stickerScale: STICKER_SCALE_OVERRIDES[stop.id] ?? 1.18,
         };
       }),
     }));

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { Check, Lock, X } from "lucide-react";
 import { tourContent, type AppChapter, type AppGuide, type AppStop } from "../data/tour-content";
+import headerBanner from "../data/header.png";
 import headerAvatar from "../../avatar.png";
 
 const STICKER_FILTER =
@@ -22,6 +23,7 @@ function FoodModal({
   onClose: () => void;
 }) {
   const [closing, setClosing] = useState(false);
+  const isBakso = stop.id === "pt-bakso";
 
   const close = () => {
     setClosing(true);
@@ -31,7 +33,7 @@ function FoodModal({
   const isLocked = chapterLocked;
   const isDone = !isLocked && stop.status === "completed";
   const isPending = !isLocked && stop.status === "pending";
-  const stickerModalSize = scaledSize(194, stop.stickerScale);
+  const stickerModalSize = scaledSize(isBakso ? 240 : 194, stop.stickerScale);
 
   const ctaLabel = isDone ? "✅  再次到訪" : isPending ? "🍴  開始探索！" : "🔒  尚未解鎖";
   const ctaBg = isDone ? "#22C55E" : isPending ? "#F97316" : "#9CA3AF";
@@ -287,14 +289,15 @@ function StickerStopCard({
   const isLocked = chapterLocked;
   const isDone = !isLocked && stop.status === "completed";
   const isSticker = stop.useStickerStyle && !isLocked;
-  const stickerNodeSize = scaledSize(86, stop.stickerScale);
+  const isBakso = stop.id === "pt-bakso";
+  const stickerNodeSize = scaledSize(isBakso ? 104 : 86, stop.stickerScale);
 
   return (
     <motion.button
       onClick={!isLocked ? onSelect : undefined}
       disabled={isLocked}
       whileTap={!isLocked ? { scale: 0.92 } : undefined}
-      className="shrink-0 w-[108px] text-center"
+      className={`shrink-0 ${isBakso ? "w-[126px]" : "w-[108px]"} text-center`}
     >
       <div
         className={[
@@ -428,7 +431,7 @@ function ChapterCard({
 export default function App() {
   const [selectedStop, setSelectedStop] = useState<{ stop: AppStop; chapterLocked: boolean } | null>(null);
   const [showGuide, setShowGuide] = useState(false);
-  const { guide, chapters, tourTitle, tourMeta } = tourContent;
+  const { guide, chapters } = tourContent;
 
   return (
     <div
@@ -443,44 +446,22 @@ export default function App() {
       >
         {/* Scrollable map */}
         <div className="flex-1 overflow-y-auto" style={{ scrollbarWidth: "none" }}>
-          <div className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-[#FFC342] pb-12 pt-2">
-            <div className="mx-auto w-full max-w-[800px] px-4">
+          <div className="relative left-1/2 w-screen -translate-x-1/2 overflow-visible pb-6">
+            <div className="mx-auto w-full max-w-[800px]">
               <motion.div
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.15, type: "spring", stiffness: 260, damping: 22 }}
-                className="py-2 flex flex-col items-center text-center"
+                className="flex items-center justify-center"
               >
-                <motion.button
-                  onClick={() => setShowGuide(true)}
-                  whileTap={{ scale: 0.94 }}
-                  className="shrink-0 overflow-visible leading-none"
-                >
-                  <img
-                    src={headerAvatar}
-                    alt={guide.name}
-                    className="object-contain"
-                    style={{ width: "92px", height: "92px", filter: STICKER_FILTER }}
-                  />
-                </motion.button>
-                <div className="min-w-0 mt-2">
-                  <h2 className="text-[28px] leading-snug text-[#4B2E00]" style={{ fontFamily: "'Fredoka One', cursive" }}>
-                    {`${guide.name}的${tourTitle}`}
-                  </h2>
-                  <p className="text-[11px] text-[#6B4F2D] font-semibold mt-1" style={{ fontFamily: "'Nunito', sans-serif" }}>
-                    {`${tourMeta} 🚶`}
-                  </p>
-                </div>
+                <img
+                  src={headerBanner}
+                  alt="Food tour header"
+                  className="block w-full max-w-[800px] object-contain"
+                  style={{ filter: "drop-shadow(0 5px 12px rgba(255,109,46,0.28))" }}
+                />
               </motion.div>
             </div>
-            <svg
-              className="absolute bottom-0 left-0 h-8 w-full pointer-events-none"
-              viewBox="0 0 390 40"
-              preserveAspectRatio="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M0,8 C52,34 122,2 188,18 C254,34 322,8 390,20 L390,40 L0,40 Z" fill="#FFFBE6" />
-            </svg>
           </div>
 
           <div className="relative pb-10 overflow-hidden">
@@ -497,7 +478,7 @@ export default function App() {
                 />
               </motion.div>
             ))}
-            <div className="mx-4 mt-3 pb-6 text-center">
+            <div className="mx-4 mt-6 pb-6 text-center">
               <p className="text-[13px] font-bold text-[#7A4A12]" style={{ fontFamily: "'Nunito', sans-serif" }}>
                 祝你餐餐有驚喜，吃得開心、走到哪都香！
               </p>
