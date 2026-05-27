@@ -438,7 +438,10 @@ export default function App() {
       className="min-h-screen w-full"
       style={{ background: "linear-gradient(160deg, #FFF3C7 0%, #FFD580 52%, #FFC85A 100%)" }}
     >
-      <div className="pointer-events-none fixed inset-x-0 top-0 z-[110] h-[env(safe-area-inset-top)] bg-[#FDB940]" />
+      <div
+        className="pointer-events-none fixed inset-x-0 top-0 z-[110]"
+        style={{ height: "env(safe-area-inset-top)", background: "#FDB940" }}
+      />
       <div
         className="relative mx-auto flex min-h-screen w-full max-w-[800px] flex-col"
         style={{
